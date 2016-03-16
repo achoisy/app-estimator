@@ -1,0 +1,58 @@
+//ionic CSS framework
+//@import '{seba:ionic-sass}/scss/ionic';
+@import '{seba:ionic-sass}/scss/ionic';
+//ionic icons
+//@import '{seba:ionic-sass}/scss/ionicons/ionicons';
+@import '{hashwin:ionicons-sass}/_ionicons';
+
+
+body {
+  @media screen and (min-width: 600px ) { 
+    background: left top repeat url("/image/Logo-background3.png");
+    padding-top: 4%;
+  }
+  @media screen and (max-width: 599px ) { 
+    background: left top repeat url("/image/Logo-background3.png");
+    padding-top: 4%;
+  }
+}
+
+
+#demo-device-ios {
+  @media screen and (min-width: 600px ) {
+    width: 429px;
+    height: 800px;
+    background: center top no-repeat url("/image/device-preview-ios-v2.png");
+    background-size: 429px;
+    margin: 0 auto; 
+    padding: 100px 61px 120px 38px;
+  }
+}
+
+.ios-content {
+  position: relative;
+}
+
+.ios-content h2 {
+  @media screen and (min-width: 600px ) {
+    color: white;
+  }
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ios-content h3 {
+  @media screen and (min-width: 600px ) {
+    color: white;
+  }
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.ios-content .login1 {
+  //background-color: white;
+  //border-radius: 25px;
+  margin-bottom: 0px;
+}
