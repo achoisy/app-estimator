@@ -1,4 +1,4 @@
-<template name="login">
+<template name="loginMe">
   <div class="row">
     <div class="col">
       <h2>
@@ -9,16 +9,13 @@
 <div class="list card login1">
   <label class="item item-input">
     <span class="input-label">Votre pseudo: </span>
-    <input type="text">
+    <input {{b "value: pseudo"}} type="text">
   </label>
 </div>
   
 <span {{b "click: startNow"}} class="button button-block button-balanced icon-right ion-chevron-right">
   COMMENCER L'ESTIMATION
 </span>
-
-
-
 
 </template>
 

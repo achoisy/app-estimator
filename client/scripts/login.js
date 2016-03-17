@@ -1,6 +1,10 @@
-Template.login.viewmodel({
+Template.loginMe.viewmodel({
+  pseudo:'',
   startNow: function() {
-    console.log("help me");
+    
+    //Ajoute le pseudo de l'utilisateur
+    Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.pseudo": this.pseudo()}});
+    
     Router.go('/question');
   },
 });

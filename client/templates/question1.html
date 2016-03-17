@@ -1,6 +1,14 @@
 <template name='question'>
   {{#with questions}}
-    {{>displayQuestion}}
+  <h3><span {{b "text: this.text"}}></span></h3>
+  <div class="list card">
+    <div class="item item-divider">
+      Choix unique:
+    </div>
+    {{#each this.reponse}}
+      {{>choixReponse}}
+    {{/each}}
+  </div>
   {{/with}}
 
 <button {{b "click: questionSuivante, hide: boutonSwitch "}} class="button button-block button-balanced icon-right ion-chevron-right">
@@ -13,17 +21,10 @@
 
 </template>
 
-<Template name='displayQuestion'>
-      <h3><span {{b "text: text"}}></span></h3>
-  <div class="list card">
-    <div class="item item-divider">
-      <span {{b "text: parent.typeChoix"}}></span>
-    </div>  
-    {{#each this.reponse}}
-    <label class="item item-icon-right">
+
+<Template name='choixReponse'>
+    <label {{b "click: select"}} class="item item-icon-right">
       <span {{b "text: this.text"}}></span>
-      <i class="icon ion-checkmark"> </i>
+      <i {{b "if: isSelected" }} class="icon ion-checkmark"> </i>
     </label>
-    {{/each}}
-  </div>
 </Template>

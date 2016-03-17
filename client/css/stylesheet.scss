@@ -12,7 +12,7 @@ body {
     padding-top: 4%;
   }
   @media screen and (max-width: 599px ) { 
-    background: left top repeat url("/image/Logo-background3.png");
+    background: left top repeat url("/image/mobile-background.png");
     padding-top: 4%;
   }
 }
@@ -37,6 +37,7 @@ body {
   @media screen and (min-width: 600px ) {
     color: white;
   }
+  color: white;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -46,6 +47,7 @@ body {
   @media screen and (min-width: 600px ) {
     color: white;
   }
+  color: white;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;

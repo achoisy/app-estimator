@@ -1,8 +1,7 @@
 Meteor.startup(function () {
-  
+  process.env.MAIL_URL = Meteor.settings.private.MAIL_URL_INFO;
   //Auto users login without password
-  AccountsGuest.anonymous = true
-  AccountsGuest.name = true
+  AccountsGuest.anonymous = true;
   
   if (Questions.find().count() === 0) {
     let questions = [
