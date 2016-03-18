@@ -20,26 +20,12 @@ Meteor.publish('chatBubbles', function(userId){
 		return ChatBubblesCollection.find(filter)
 	});
 
-Meteor.publish("users", function(userId) {
+Meteor.publish("users", function() {
+		var userId = this.userId;
 		if (Roles.userIsInRole(userId, 'admin'))
 			return Meteor.users.find({}, {fields: {profile: 1, status: 1, username: 1}})
 		return Meteor.users.find(userId)
 	});
-
-Meteor.publish('chatBubbles', function(userId){
-		var filter = {authorId: userId}
-		if (Roles.userIsInRole(userId, 'admin')) {
-			filter = {}
-		}
-		filter['archived'] = {$in: [null, false]}
-		return ChatBubblesCollection.find(filter)
-	})
-
-Meteor.publish("users", function(userId) {
-		if (Roles.userIsInRole(userId, 'admin'))
-			return Meteor.users.find({}, {fields: {profile: 1, status: 1, username: 1}})
-		return Meteor.users.find(userId)
-	})
 
 ChatBubblesCollection.allow({
 		insert: function (userId, doc) {
