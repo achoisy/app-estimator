@@ -1,7 +1,9 @@
 Meteor.startup(function () {
+  //useradmin right
+  Roles.addUsersToRoles('xacbywhh6JxnceNHk', ['admin']);
   process.env.MAIL_URL = Meteor.settings.private.MAIL_URL_INFO;
   //Auto users login without password
-  AccountsGuest.anonymous = true;
+  AccountsGuest.anonymous = false;
   
   if (Questions.find().count() === 0) {
     let questions = [

@@ -86,7 +86,6 @@ Template.chatBubbles.events({
 	}
 });
 
-
 Template.chatBubbles.rendered = function () {
 	// Start idle monitor 
 	// https://github.com/mizzao/meteor-user-status/
