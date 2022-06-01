@@ -10,6 +10,7 @@ Frontend:
  - Ionic (css)
 
 Lib: 
+ - momentjs
 
 DB:
  - Mongodb
